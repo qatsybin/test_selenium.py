@@ -13,7 +13,7 @@ class TestNiho():
     def setup_method(self):
         chrome_args = webdriver.ChromeOptions()
         chrome_args.debugger_address = "127.0.0.1:9222"
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(option=chrome_args)
 
     # def teardown_method(self):
     #     self.driver.quit()
