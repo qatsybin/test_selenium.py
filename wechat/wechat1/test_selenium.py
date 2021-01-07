@@ -13,11 +13,12 @@ class TestNiho():
     def setup_method(self):
         chrome_args = webdriver.ChromeOptions()
         chrome_args.debugger_address = "127.0.0.1:9222"
-        self.driver = webdriver.Chrome(option=chrome_args)
+        self.driver = webdriver.Chrome(options=chrome_args)
 
     # def teardown_method(self):
     #     self.driver.quit()
     def test_cookie(self):
+        # 将获取到的cookie文件放到本地cookie.json
         # cookies = self.driver.get_cookies()
         # with open("cookie.json", "w") as f:
         #     json.dump(cookies, f)
