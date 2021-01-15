@@ -6,10 +6,10 @@ from test_po.page.main_page import MainPage
 
 class TestAddDepart:
     def setup_class(self):
-        pass
+        self.main = MainPage()
 
     def test_add_department(self):
         # 实例化MainPage类
-        main = MainPage()
-        result = main.goto_add_department().add_department().get_list()
-        assert "霍格沃兹学院" in result
+
+        result = self.main.goto_add_department().add_department("LG5期学员").get_list()
+        assert "LG5期学员" in result

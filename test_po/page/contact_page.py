@@ -12,6 +12,6 @@ class ContactPage(BasePage):
     def get_list(self):
         name_depart = self.driver.find_elements(By.XPATH, '//*[@class="jstree-anchor"]')
         name_list = []
-        for name in name_depart:
-            name_list.append(name.text)
+        for names in name_depart:
+            name_list.append(names.text)
         return name_list

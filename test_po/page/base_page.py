@@ -26,6 +26,7 @@ class BasePage:
 
     def _cookie_login(self):
         self.driver.get("https://work.weixin.qq.com/")
+        self.driver.maximize_window()
         # 读取本地的cookie文件并取值，登录
         with open("cookie.json", "r") as f:
             cookies = json.load(f)
@@ -37,3 +38,7 @@ class BasePage:
         # 点击通讯录tab
         self.driver.find_element(By.XPATH, "//*[@id='menu_contacts']").click()
         sleep(3)
+
+    def find(self, by, value):
+        return self.driver.find_element(by=by, value=value)
+
