@@ -15,3 +15,11 @@ class ContactPage(BasePage):
         for names in name_depart:
             name_list.append(names.text)
         return name_list
+
+    def get_memlist(self, name):
+
+        self.find(By.ID,'memberSearchInput').send_keys(name)
+        get_name = self.find(By.XPATH, '//*[@class="member_display_cover_detail_top"]/div[1]').text
+        return get_name
+
+

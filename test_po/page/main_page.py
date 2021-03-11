@@ -11,6 +11,6 @@ class MainPage(BasePage):
         pass
 
     def goto_add_department(self):
-        self.driver.find_element(By.XPATH, '//*[@id="menu_contacts"]/span').click()
+        # self.driver.find_element(By.XPATH, '//*[@id="menu_contacts"]/span').click()
 
         return AddDepartPage(self.driver)
